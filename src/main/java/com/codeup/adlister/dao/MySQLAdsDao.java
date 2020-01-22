@@ -33,8 +33,10 @@ public class MySQLAdsDao implements Ads {
         if (type != null) {
             switch (type) {
                 case "buy":
-                case "sell":
                     typeId = 1;
+                    break;
+                case "sell":
+                    typeId = 2;
                     break;
                 case "housing":
                     typeId = 3;
@@ -44,8 +46,6 @@ public class MySQLAdsDao implements Ads {
                     break;
             }
         }
-        System.out.println(typeId);
-        System.out.println(place);
         try {
             stmt = connection.prepareStatement("SELECT * FROM ads WHERE type_id = '"+ typeId+"' AND location = '" + place +"'");
             ResultSet rs = stmt.executeQuery();
@@ -59,14 +59,15 @@ public class MySQLAdsDao implements Ads {
     public Long insert(Ad ad) {
         java.sql.Date sql = new java.sql.Date(ad.getDate().getTime());
         try {
-            String insertQuery = "INSERT INTO ads(user_id, title, description, location, type_id, date) VALUES (?, ?, ?, ?, ?, ?)";
+            String insertQuery = "INSERT INTO ads(user_id, title, description, location, type_id, category_id, date) VALUES (?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
             stmt.setString(2, ad.getTitle());
             stmt.setString(3, ad.getDescription());
             stmt.setString(4, ad.getLocation());
             stmt.setLong(5, ad.getTypeId());
-            stmt.setDate(6, sql);
+            stmt.setLong(6, ad.getCategoryId());
+            stmt.setDate(7, sql);
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
@@ -81,6 +82,7 @@ public class MySQLAdsDao implements Ads {
             rs.getLong("id"),
             rs.getLong("user_id"),
             rs.getLong("type_id"),
+            rs.getLong("category_id"),
             rs.getString("title"),
             rs.getString("description"),
                 rs.getString("location"),

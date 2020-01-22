@@ -16,6 +16,7 @@ public class AdsIndexServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.setAttribute("location", request.getParameter("place"));
         request.setAttribute("ads", DaoFactory.getAdsDao().all((String) session.getAttribute("type"), (String) session.getAttribute("location")));
+        request.setAttribute("categories", DaoFactory.getCategoriesDao().all((String) session.getAttribute("type")));
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
     }
 }

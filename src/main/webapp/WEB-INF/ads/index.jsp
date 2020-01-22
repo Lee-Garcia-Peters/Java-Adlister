@@ -18,6 +18,12 @@
             <p>${ad.description}</p>
         </div>
     </c:forEach>
+
+    <c:forEach var="category" items="${categories}">
+        <div class="col-md-6">
+            <h2>${category.name}</h2>
+        </div>
+    </c:forEach>
 </div>
 
 </body>

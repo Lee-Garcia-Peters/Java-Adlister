@@ -6,25 +6,28 @@ public class Ad {
     private long id;
     private long userId;
     private long typeId;
+    private long categoryId;
     private String title;
     private String description;
     private String location;
     private Date date;
 
 
-    public Ad(long id, long userId, long typeId, String title, String description, String location, Date date) {
+    public Ad(long id, long userId, long typeId, long categoryId, String title, String description, String location, Date date) {
         this.id = id;
         this.userId = userId;
         this.typeId = typeId;
+        this.categoryId = categoryId;
         this.title = title;
         this.description = description;
         this.location = location;
         this.date = date;
     }
 
-    public Ad(long userId, long typeId, String title, String description, String location, Date date) {
+    public Ad(long userId, long typeId, long categoryId, String title, String description, String location, Date date) {
         this.userId = userId;
         this.typeId = typeId;
+        this.categoryId = categoryId;
         this.title = title;
         this.description = description;
         this.location = location;
@@ -50,6 +53,10 @@ public class Ad {
     public long getTypeId() { return typeId; }
 
     public void setTypeId(long typeId) { this.typeId = typeId; }
+
+    public long getCategoryId() {return categoryId;}
+
+    public void setCategoryId(long categoryId) {this.categoryId = categoryId;}
 
     public String getTitle() {
         return title;

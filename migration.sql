@@ -41,10 +41,12 @@ CREATE TABLE ads
     description TEXT         NOT NULL,
     location    VARCHAR(50)  NOT NULL,
     type_id     INT UNSIGNED NOT NULL,
+    category_id  INT UNSIGNED NOT NULL,
     date        DATE         NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users (id),
-    FOREIGN KEY (type_id) REFERENCES types (id)
+    FOREIGN KEY (type_id) REFERENCES types (id),
+    FOREIGN KEY (category_id) REFERENCES categories (id)
 );
 
 
