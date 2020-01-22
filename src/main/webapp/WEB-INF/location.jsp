@@ -23,7 +23,7 @@
 </div>
 <div class="card-group">
     <div class="card">
-        <a href="/ads">
+        <a href="/ads?place=Austin">
         <img class="card-img-top" src="../resources/img/Texas-Austin.jpg" alt="austin image cap">
         </a>
         <div class="card-body">
@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="card">
-        <a href="/ads">
+        <a href="/ads?place=Dallas">
         <img class="card-img-top" src="../resources/img/texas-dallas.jpg" alt="dallas image cap">
         </a>
             <div class="card-body">
@@ -41,7 +41,7 @@
         </div>
     </div>
     <div class="card">
-        <a href="/ads">
+        <a href="/ads?place=Houston">
         <img class="card-img-top" src="../resources/img/texas-houston.jpg" alt="houston image cap">
         </a>
             <div class="card-body">
@@ -50,7 +50,7 @@
         </div>
     </div>
     <div class="card">
-        <a href="/ads">
+        <a href="/ads?place=SanAntonio">
         <img class="card-img-top" src="../resources/img/texas-Sanantonio.jpg" alt="san antonio image cap">
         </a>
             <div class="card-body">
