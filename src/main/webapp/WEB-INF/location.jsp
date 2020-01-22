@@ -28,7 +28,7 @@
         </a>
         <div class="card-body">
             <h5 class="card-title">Austin</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text">The capital city of Texas with a growing population of at least 1 million Austinites "keep it weird" by embracing a diverse melting pot of cultures from all around the world.</p>
         </div>
     </div>
     <div class="card">
@@ -37,7 +37,7 @@
         </a>
             <div class="card-body">
             <h5 class="card-title">Dallas</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text">Home of the Cowboys! Known for its dominant sectors of its diverse economy include defense, financial services, information technology, telecommunications, and transportation.</p>
         </div>
     </div>
     <div class="card">
@@ -46,7 +46,7 @@
         </a>
             <div class="card-body">
             <h5 class="card-title">Houston</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text">The largest city in the state of Texas measured by populous with over 2.5 million residents! Houston's economy since the late 19th century has a broad industrial base in energy, manufacturing, aeronautics.</p>
         </div>
     </div>
     <div class="card">
@@ -55,7 +55,7 @@
         </a>
             <div class="card-body">
             <h5 class="card-title">San Antonio</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text">This is where the story of Codeup all began; the legendary bootcamp that teaches students full-stack web development and data science!</p>
         </div>
     </div>
 </div>

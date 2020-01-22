@@ -33,7 +33,10 @@
                     <a class="nav-link" href="/createType">+ Create Ad</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="/profile">Profile</a>
+                    <a class="nav-link" href="/profile">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
                 </li>
             </ul>
         </div>
