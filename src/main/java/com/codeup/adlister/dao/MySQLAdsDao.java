@@ -27,10 +27,27 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public List<Ad> all() {
+    public List<Ad> all(String type, String place) {
         PreparedStatement stmt = null;
+        int typeId = 0;
+        if (type != null) {
+            switch (type) {
+                case "buy":
+                case "sell":
+                    typeId = 1;
+                    break;
+                case "housing":
+                    typeId = 3;
+                    break;
+                case "jobs":
+                    typeId = 4;
+                    break;
+            }
+        }
+        System.out.println(typeId);
+        System.out.println(place);
         try {
-            stmt = connection.prepareStatement("SELECT * FROM ads");
+            stmt = connection.prepareStatement("SELECT * FROM ads WHERE type_id = '"+ typeId+"' AND location = '" + place +"'");
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
