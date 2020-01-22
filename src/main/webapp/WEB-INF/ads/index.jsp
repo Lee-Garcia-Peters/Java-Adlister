@@ -9,7 +9,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-<div class="container">
+<div class="container" style="margin-top: 3em">
     <h1>Here Are all the ads!</h1>
 
     <c:forEach var="ad" items="${ads}">
