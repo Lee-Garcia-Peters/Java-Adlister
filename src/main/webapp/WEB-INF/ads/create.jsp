@@ -27,18 +27,9 @@
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
             <div class="form-group">
-                <label for="typeid">Typeid</label>
-                <input id="typeid" name="typeid" class="form-control" type="text">
-            </div>
-            <div class="form-group">
-                <label for="location">Location</label>
-                <input id="location" name="location" class="form-control" type="text">
-            </div>
-            <div class="form-group">
                 <label for="date">Date</label>
                 <input id="date" name="date" class="form-control" type="date">
             </div>
-
             <input type="submit" class="btn btn-block btn-primary">
         </form>
     </div>
