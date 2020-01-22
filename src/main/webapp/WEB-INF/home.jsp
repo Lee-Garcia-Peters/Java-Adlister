@@ -7,34 +7,47 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <div class="card-group" style="margin-top: 10em">
+    <div class="jumbotron jumbotron-fluid" style="margin: 0">
+        <div class="container">
+            <h1 class="display-4">Welcome to the Texas Adlister!</h1>
+            <p class="lead">The best place to find everything you need in the greatest state of America.</p>
+        </div>
+    </div>
+    <div class="card-group">
         <div class="card">
-<%--            <img class="card-img-top" src="/resources/img/buy-texas.jpg" alt="Buy image cap">--%>
+            <a href="/location" >
             <img class="card-img-top" src="../resources/img/buy-texas.jpg" alt="Buy image cap">
+            </a>
             <div class="card-body">
                 <h5 class="card-title">Buy</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">Use the Texas Adlister to make purchases from other trusted users near you! Select from a variety of categories to find the best deal!</p>
             </div>
         </div>
         <div class="card">
-            <img class="card-img-top" src="..." alt="Sell image cap">
+            <a href="/location">
+            <img class="card-img-top" src="../resources/img/texas-sell.jpg" alt="Sell image cap">
+            </a>
             <div class="card-body">
                 <h5 class="card-title">Sell</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text">You can sell virtually anything you'd like on the Texas Adlister! Select the category that works best and match your city!</p>
             </div>
         </div>
         <div class="card">
-            <img class="card-img-top" src="..." alt="Jobs image cap">
+            <a href="/location">
+            <img class="card-img-top" src="../resources/img/texas-jobs.jpg" alt="Jobs image cap">
+            </a>
             <div class="card-body">
                 <h5 class="card-title">Jobs</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text">The Texas Adlister is one of the hottest websites valued amongst employer partners! Find an opportunity and change your career path!</p>
             </div>
         </div>
         <div class="card">
-            <img class="card-img-top" src="..." alt="Housing image cap">
+            <a href="/location">
+            <img class="card-img-top" src="../resources/img/texas-housing.png" alt="Housing image cap">
+            </a>
             <div class="card-body">
                 <h5 class="card-title">Housing</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text">Find your new home with the Texas Adlister! Choose from all the major cities in Texas and start fresh with your new beginning!</p>
             </div>
         </div>
     </div>
