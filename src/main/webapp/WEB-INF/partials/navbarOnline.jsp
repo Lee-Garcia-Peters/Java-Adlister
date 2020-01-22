@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav nav-fill w-100">
                 <li class="nav-item">
-                    <a class="nav-link" href="">Home</a>
+                    <a class="nav-link" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
                     <form class="form-inline my-lg-0">
@@ -30,7 +30,7 @@
                     </form>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">+ Create Ad</a>
+                    <a class="nav-link" href="/createType">+ Create Ad</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" target="_blank" href="/profile">Profile</a>

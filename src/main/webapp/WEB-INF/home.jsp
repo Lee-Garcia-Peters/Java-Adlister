@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--<% var username = request.getSession().getAttribute("username"); %>--%>
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
@@ -6,7 +8,14 @@
     </jsp:include>
 </head>
 <body>
-    <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<c:choose>
+    <c:when test="${sessionScope.user.username != null}">
+        <jsp:include page="/WEB-INF/partials/navbarOnline.jsp" />
+    </c:when>
+    <c:otherwise>
+        <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+    </c:otherwise>
+</c:choose>
     <div class="jumbotron jumbotron-fluid" style="margin: 0">
         <div class="container">
             <h1 class="display-4">Welcome to the Texas Adlister!</h1>

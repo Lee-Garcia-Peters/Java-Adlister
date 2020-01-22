@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
@@ -6,7 +7,15 @@
     </jsp:include>
 </head>
 <body>
-    <div class="container">
+<c:choose>
+    <c:when test="${sessionScope.user.username != null}">
+        <jsp:include page="/WEB-INF/partials/navbarOnline.jsp" />
+    </c:when>
+    <c:otherwise>
+        <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+    </c:otherwise>
+</c:choose>
+<div class="container" style="margin-top: 4em">
         <h1>Create a new Ad</h1>
         <form action="/ads/create" method="post">
             <div class="form-group">
