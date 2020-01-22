@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "controllers.CreateTypeServlet", urlPatterns = "/createtype")
+@WebServlet(name = "controllers.CreateTypeServlet", urlPatterns = "/createType")
 public class CreateTypeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/WEB-INF/createType.jsp").forward(request, response);
