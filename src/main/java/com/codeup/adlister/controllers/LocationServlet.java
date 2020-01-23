@@ -17,7 +17,7 @@ public class LocationServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.setAttribute("type", request.getParameter("item"));
 
-        System.out.println((String)session.getAttribute("type"));
+
         request.getRequestDispatcher("/WEB-INF/location.jsp").forward(request, response);
     }
 }
