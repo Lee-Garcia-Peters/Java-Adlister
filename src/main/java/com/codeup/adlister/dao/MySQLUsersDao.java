@@ -35,6 +35,12 @@ public class MySQLUsersDao implements Users {
     }
 
     @Override
+    public void updateUser(int id, String name, String pass, String email) {
+        PreparedStatement stmt;
+        String query = "UPDATE user SET";
+    }
+
+    @Override
     public Long insert(User user) {
         String query = "INSERT INTO users(username, email, password) VALUES (?, ?, ?)";
         try {
