@@ -18,18 +18,27 @@
 <div class="container" style="margin-top: 5em">
     <h1>Here is the ad!</h1>
 
-    <c:forEach var="ad" items="${sessionScope.user.ad}">
-        <div class="col-md-6">
-            <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
+    <c:forEach var="ad" items="${ads}">
+        <div>
+            <c:if test="${ad.id}==${id}">
+                ${ad.title}
+                ${ad.description}
+            </c:if>
+
         </div>
+
+<%--        <div class="col-md-6">--%>
+<%--            <h2>${ad.title}</h2>--%>
+<%--            <p>${ad.description}</p>--%>
+<%--        </div>--%>
     </c:forEach>
 
-    <c:forEach var="category" items="${categories}">
-        <div class="col-md-6">
-            <h2>${category.name}</h2>
-        </div>
-    </c:forEach>
+
+<%--    <c:forEach var="category" items="${categories}">--%>
+<%--        <div class="col-md-6">--%>
+<%--            <h2>${category.name}</h2>--%>
+<%--        </div>--%>
+<%--    </c:forEach>--%>
 </div>
 </body>
 </html>
