@@ -16,7 +16,7 @@
     </c:otherwise>
 </c:choose>
 <div class="container" style="margin-top: 4em">
-    <h1>Create a new Ad</h1>
+    <h1>Update Ad</h1>
     <form action="/updateAd" method="post">
         <div class="form-group">
             <label for="title">Title</label>
