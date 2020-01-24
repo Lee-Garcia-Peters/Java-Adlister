@@ -24,4 +24,5 @@ public class AdServlet extends HttpServlet {
         session.setAttribute("adCategory", DaoFactory.getCategoriesDao().getCategory((int)two.getCategoryId()));
         request.getRequestDispatcher("/WEB-INF/ads/ad.jsp").forward(request, response);
     }
+
 }

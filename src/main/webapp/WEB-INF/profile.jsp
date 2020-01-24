@@ -25,7 +25,7 @@
             </a>
         </div>
     </div>
-<c:forEach var="ad" items="${ads}">
+<c:forEach var="ad" items="${userAds}">
     <div class="col-md-6">
         <%! String link = "/ads/ad?id=";%>
         <h2>${ad.title}</h2>
