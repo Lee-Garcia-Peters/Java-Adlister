@@ -145,12 +145,13 @@ public class MySQLAdsDao implements Ads {
         }
     }
     public void updateAd(Ad ad) {
+        java.sql.Date sql = new java.sql.Date(ad.getDate().getTime());
         try {
             String insertQuery = "UPDATE ads SET title = ?, description = ?, date = ? WHERE id = ?";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setString(1, ad.getTitle());
             stmt.setString(2, ad.getDescription());
-            stmt.setDate(3, (Date) ad.getDate());
+            stmt.setDate(3, sql);
             stmt.setInt(4,(int) ad.getId());
             stmt.executeUpdate();
         } catch (SQLException e) {

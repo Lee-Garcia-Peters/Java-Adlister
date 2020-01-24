@@ -23,7 +23,7 @@ public class CreateAdServlet extends HttpServlet {
             return;
         }
         HttpSession session = request.getSession();
-        session.setAttribute("createCity", "city");
+        session.setAttribute("createCity", request.getParameter("city"));
         request.getRequestDispatcher("/WEB-INF/ads/create.jsp")
             .forward(request, response);
     }
