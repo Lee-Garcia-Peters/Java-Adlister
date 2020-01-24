@@ -56,7 +56,7 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public List<Ad> getUserAds(int id){
+    public List<Ad> getUserAds(Long id){
         PreparedStatement stmt;
         try {
             stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id = '"+ id+"'");
@@ -133,4 +133,29 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+    public Ad getAdById(int ad_id) {
+        try {
+            PreparedStatement stmt = connection.prepareStatement("SELECT * FROM ads WHERE id = ?");
+            stmt.setLong(1, ad_id);
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            return extractAd(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving ads by id.", e);
+        }
+    }
+    public void updateAd(Ad ad) {
+        try {
+            String insertQuery = "UPDATE ads SET title = ?, description = ?, date = ? WHERE id = ?";
+            PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
+            stmt.setString(1, ad.getTitle());
+            stmt.setString(2, ad.getDescription());
+            stmt.setDate(3, (Date) ad.getDate());
+            stmt.setInt(4,(int) ad.getId());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error increasing product #" + ad.getId() + " quantity", e);
+        }
+    }
+
 }

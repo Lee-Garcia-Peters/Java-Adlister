@@ -17,18 +17,18 @@
 </c:choose>
 <div class="container" style="margin-top: 4em">
     <h1>Create a new Ad</h1>
-    <form action="/ads/create" method="post">
+    <form action="/updateAd" method="post">
         <div class="form-group">
             <label for="title">Title</label>
-            <input id="title" name="title" class="form-control" type="text">
+            <input id="title" name="editTitle" class="form-control" type="text">
         </div>
         <div class="form-group">
             <label for="description">Description</label>
-            <textarea id="description" name="description" class="form-control" type="text"></textarea>
+            <textarea id="description" name="editDescription" class="form-control" type="text"></textarea>
         </div>
         <div class="form-group">
             <label for="date">Date</label>
-            <input id="date" name="date" class="form-control" type="date">
+            <input id="date" name="editDate" class="form-control" type="date">
         </div>
         <input type="submit" class="btn btn-block btn-primary">
     </form>

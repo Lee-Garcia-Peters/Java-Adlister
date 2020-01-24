@@ -15,11 +15,12 @@ import java.io.IOException;
 public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        System.out.println(session.getAttribute("user"));
         if (session.getAttribute("user") == null) {
             response.sendRedirect("/login");
             return;
         }
+        User user = (User)session.getAttribute("user");
+        session.setAttribute("userAds", DaoFactory.getAdsDao().getUserAds(user.getId()));
         request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
     }
 }

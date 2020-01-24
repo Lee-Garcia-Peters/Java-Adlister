@@ -32,21 +32,22 @@ public class CreateAdServlet extends HttpServlet {
         HttpSession session = request.getSession();
         User user = (User) request.getSession().getAttribute("user");
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        Long typeid = Long.parseLong((String)session.getAttribute("createType"));
         Ad ad = null;
         try {
             ad = new Ad(
                 user.getId(),
-                Long.parseLong(request.getParameter("typeid")),
-                Long.parseLong(request.getParameter("categoryid")),
+                typeid,
+                Long.parseLong(request.getParameter("categorySelect")),
                 request.getParameter("title"),
                 request.getParameter("description"),
-                    request.getParameter("location"),
+                    (String)session.getAttribute("createCity"),
                     df.parse(request.getParameter("date"))
             );
         } catch (ParseException e) {
             e.printStackTrace();
         }
         DaoFactory.getAdsDao().insert(ad);
-        response.sendRedirect("/ads");
+        response.sendRedirect("/profile");
     }
 }

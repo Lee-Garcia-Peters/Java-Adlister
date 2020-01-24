@@ -23,7 +23,7 @@
 </div>
 <div class="card-group">
     <div class="card">
-        <a href="/createLocation?create=buy" >
+        <a href="/createLocation?create=1" >
             <img class="card-img-top" src="../resources/img/buy-texas.jpg" alt="Buy image cap">
         </a>
         <div class="card-body">
@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="card">
-        <a href="/createLocation?create=sell">
+        <a href="/createLocation?create=2">
             <img class="card-img-top" src="../resources/img/texas-sell.jpg" alt="Sell image cap">
         </a>
         <div class="card-body">
@@ -41,7 +41,7 @@
         </div>
     </div>
     <div class="card">
-        <a href="/createLocation?create=jobs">
+        <a href="/createLocation?create=4">
             <img class="card-img-top" src="../resources/img/texas-jobs.jpg" alt="Jobs image cap">
         </a>
         <div class="card-body">
@@ -50,7 +50,7 @@
         </div>
     </div>
     <div class="card">
-        <a href="/createLocation?create=housing">
+        <a href="/createLocation?create=3">
             <img class="card-img-top" src="../resources/img/texas-housing.png" alt="Housing image cap">
         </a>
         <div class="card-body">

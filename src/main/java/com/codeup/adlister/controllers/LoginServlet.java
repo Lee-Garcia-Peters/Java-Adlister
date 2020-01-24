@@ -58,8 +58,8 @@ public class LoginServlet extends HttpServlet {
 
         if (validAttempt) {
             session.setAttribute("user", user);
-            session.setAttribute("loggedIn", true);
             User get = (User) session.getAttribute("user");
+            session.setAttribute("loggedId", get.getId());
             response.sendRedirect("/profile");
         } else {
             session.setAttribute("loginPassFail", true);
