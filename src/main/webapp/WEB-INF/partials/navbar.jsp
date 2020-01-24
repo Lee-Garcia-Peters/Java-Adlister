@@ -11,20 +11,20 @@
                         <a class="nav-link" href="/home">Home</a>
                     </li>
                     <li class="nav-item">
-                    <form class="form-inline my-lg-0">
-                        <select class="custom-select mr-sm-2" id="type-select">
+                    <form class="form-inline my-lg-0" action="/ads/index" method="POST">
+                        <select class="custom-select mr-sm-2" id="type-select" name="type-select">
                             <option selected>Choose...</option>
                             <option value="1">Buy</option>
                             <option value="2">Sell</option>
                             <option value="3">Housing</option>
                             <option value="4">Jobs</option>
                         </select>
-                        <select class="custom-select mr-sm-2" id="location-select">
+                        <select class="custom-select mr-sm-2" id="location-select" name="location-select">
                             <option selected>Location</option>
-                            <option value="1">Austin</option>
-                            <option value="2">Dallas</option>
-                            <option value="3">Houston</option>
-                            <option value="4">San Antonio</option>
+                            <option value="Austin">Austin</option>
+                            <option value="Dallas">Dallas</option>
+                            <option value="Houston">Houston</option>
+                            <option value="SanAntonio">San Antonio</option>
                         </select>
                         <button class="btn btn-outline-warning my-sm-0" type="submit">Search</button>
                     </form>

@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface Users {
     User findByUsername(String username);
-    void updateUser(int id, String name, String pass, String email);
+    User updateUser(User user, int id);
     Long insert(User user);
 }

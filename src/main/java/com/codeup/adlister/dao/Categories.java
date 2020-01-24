@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface Categories {
     List<Category> all(String type);
+    List<Category> getCategory (int id);
 }

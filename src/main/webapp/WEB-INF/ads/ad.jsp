@@ -20,25 +20,21 @@
 
     <c:forEach var="ad" items="${ads}">
         <div>
-            <c:if test="${ad.id}==${id}">
-                ${ad.title}
-                ${ad.description}
+            <c:if test="${ad.id == sessionScope.id}">
+                <p>${ad.title}</p>
+                <p>${ad.description}</p>
             </c:if>
 
         </div>
 
-<%--        <div class="col-md-6">--%>
-<%--            <h2>${ad.title}</h2>--%>
-<%--            <p>${ad.description}</p>--%>
-<%--        </div>--%>
+    </c:forEach>
+    <c:forEach var="category" items="${adCategory}">
+        <div>
+            <p>${category.name}</p>
+        </div>
     </c:forEach>
 
 
-<%--    <c:forEach var="category" items="${categories}">--%>
-<%--        <div class="col-md-6">--%>
-<%--            <h2>${category.name}</h2>--%>
-<%--        </div>--%>
-<%--    </c:forEach>--%>
 </div>
 </body>
 </html>

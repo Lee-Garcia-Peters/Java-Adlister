@@ -51,6 +51,19 @@ public class MySQLCategoriesDao  implements Categories{
         }
     }
 
+    @Override
+    public List<Category> getCategory(int id){
+        PreparedStatement stmt;
+        System.out.println(id);
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM categories WHERE id = '" + id + "'");
+            ResultSet rs = stmt.executeQuery();
+            return createCategoriesFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving category name", e);
+        }
+    }
+
     private Category extractCategory(ResultSet rs) throws SQLException {
         return new Category(
                 rs.getLong("id"),

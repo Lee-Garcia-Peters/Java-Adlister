@@ -20,11 +20,15 @@
         <form action="/login" method="POST">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input id="username" name="username" class="form-control" type="text">
+                <input id="username" name="username" class="form-control" type="text" value="${loginSticky}">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
                 <input id="password" name="password" class="form-control" type="password">
+            </div>
+            <div class="form-group">
+                <label for="check">Confirm Password</label>
+                <input id="check" name="check" class="form-control" type="password">
             </div>
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
         </form>
