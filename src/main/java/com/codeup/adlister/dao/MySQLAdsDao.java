@@ -63,7 +63,19 @@ public class MySQLAdsDao implements Ads {
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
-            throw new RuntimeException("Error retrieving all ads.", e);
+            throw new RuntimeException("Error retrieving user ads.", e);
+        }
+    }
+
+    @Override
+    public List<Ad> chosenAd(int id){
+        PreparedStatement stmt;
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM ads WHERE id = '"+ id+"'");
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving ads.", e);
         }
     }
 
@@ -87,6 +99,18 @@ public class MySQLAdsDao implements Ads {
         } catch (SQLException e) {
             throw new RuntimeException("Error creating a new ad.", e);
         }
+    }
+
+    @Override
+    public void delete(int id) {
+        PreparedStatement stmt;
+        try {
+            stmt = connection.prepareStatement("DELETE FROM ads WHERE id='" +id+"'");
+            stmt.execute();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error deleting ad.");
+        }
+
     }
 
     private Ad extractAd(ResultSet rs) throws SQLException {

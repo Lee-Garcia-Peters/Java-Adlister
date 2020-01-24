@@ -12,14 +12,14 @@
                 </li>
                 <li class="nav-item">
                     <form class="form-inline my-lg-0">
-                        <select class="custom-select mr-sm-2" id="type-select">
+                        <select class="custom-select mr-sm-2" id="type-select" name="type-select">
                             <option selected>Choose...</option>
                             <option value="1">Buy</option>
                             <option value="2">Sell</option>
                             <option value="3">Housing</option>
                             <option value="4">Jobs</option>
                         </select>
-                        <select class="custom-select mr-sm-2" id="location-select">
+                        <select class="custom-select mr-sm-2" id="location-select" name="location-select">
                             <option selected>Location</option>
                             <option value="1">Austin</option>
                             <option value="2">Dallas</option>
